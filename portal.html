@@ -141,6 +141,7 @@ body{display:flex;flex-direction:column;min-height:100vh}
   <a href="index.html" class="topnav-logo">Life Circuitry <span>/ Portal</span></a>
   <div class="topnav-right">
     <span class="topnav-user">Alex Cooper</span>
+    <button onclick="signOut()" class="nav-home" style="background:none;border:none;cursor:pointer;">Sign Out</button>
     <a href="index.html" class="nav-home">← Sales Page</a>
   </div>
 </nav>
@@ -527,7 +528,30 @@ function resetProgress(){
   loadDashboard();
 }
 
-window.addEventListener('DOMContentLoaded', loadDashboard);
+// ── ACCESS GATE ──────────────────────────────────────────────────────────────
+const SESSION_KEY = 'lc_access';
+const SESSION_DURATION = 7 * 24 * 60 * 60 * 1000;
+
+function checkAccess(){
+  try{
+    const s = JSON.parse(localStorage.getItem(SESSION_KEY)||'null');
+    if(!s || Date.now() - s.ts > SESSION_DURATION){
+      localStorage.removeItem(SESSION_KEY);
+      window.location.href = 'access.html';
+      return false;
+    }
+    return true;
+  }catch(e){ window.location.href = 'access.html'; return false; }
+}
+
+function signOut(){
+  if(!confirm('Sign out? Your progress will be saved.')) return;
+  localStorage.removeItem(SESSION_KEY);
+  window.location.href = 'access.html';
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
+window.addEventListener('DOMContentLoaded', ()=>{ if(checkAccess()) loadDashboard(); });
 </script>
 </body>
 </html>
