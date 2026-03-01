@@ -118,6 +118,28 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 .problem-list{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:0}
 .problem-list li{font-size:14px;line-height:1.6;color:var(--mid);padding:12px 0;border-bottom:1px solid var(--rule);display:flex;align-items:baseline;gap:12px}
 .problem-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px}
+.reactive-cycle{margin-top:28px;border:1px solid var(--rule);padding:24px 28px;background:var(--bg)}
+.reactive-cycle-label{font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--light);margin-bottom:14px}
+.cycle-steps{display:flex;flex-direction:column;gap:0}
+.cycle-step{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--rule)}
+.cycle-step:last-child{border-bottom:none}
+.cycle-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.cycle-dot.up{background:var(--teal)}
+.cycle-dot.down{background:var(--red)}
+.cycle-text{font-size:13px;line-height:1.5;color:var(--mid)}
+.cycle-step.dim{opacity:0.5}
+.problem-inline-quote{font-size:14px;font-style:italic;color:var(--mid);border-left:3px solid var(--teal);padding:16px 20px;margin-top:24px;line-height:1.7;background:var(--teal-p)}
+
+/* -- TWO TRUTHS BAND -- */
+.truths-band{background:var(--charcoal);padding:64px 40px}
+.truths-inner{max-width:900px;margin:0 auto}
+.truths-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;color:var(--teal);margin-bottom:32px}
+.truths-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.truth-card{padding:36px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07)}
+.truth-statement{font-family:'Barlow Condensed',sans-serif;font-size:clamp(20px,2.2vw,26px);font-weight:900;text-transform:uppercase;line-height:1.1;color:#fff;margin-bottom:14px}
+.truth-statement em{color:var(--teal);font-style:normal}
+.truth-body{font-size:13px;line-height:1.7;color:rgba(255,255,255,0.4)}
+@media(max-width:640px){.truths-band{padding:48px 24px}.truths-grid{grid-template-columns:1fr}}
 
 /* ── MODULES ── */
 .modules-section{background:var(--bg)}
@@ -361,13 +383,25 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
       <div>
         <div class="problem-pull">The reason you stopped<br>is no longer the problem<br><em>keeping you here.</em></div>
         <p class="problem-body">Most people go looking for better strategies, more motivation, stronger willpower. They're solving the wrong problem — because the original reason they got stuck has already been replaced by something else entirely.</p>
-        <p class="problem-body">Self-trust collapsed. And without it, nothing else works. Not the frameworks, not the accountability, not the inspiration. The foundation is broken.</p>
-        <p class="problem-body">Life Circuitry doesn't try to motivate you. It maps the gap, identifies what actually broke, and rebuilds the operating system everything else runs on.</p>
+        <p class="problem-body">You climb. Then drop sharply. Recover, climb again, drop again. Each cycle, your confidence erodes a little more. Your self-trust fractures. You start to doubt whether you actually know what you're doing.</p>
+        <p class="problem-body">This is <strong>Reactive Adaptation</strong> — and it's not a motivation failure. It's structural. Your competence worked. Then it calcified. And calcified competence can't adapt to a changed reality.</p>
+        <div class="problem-inline-quote">"Stuck is not the absence of movement. It's the repetition of movement that doesn't allow the system to update."</div>
+        <div class="reactive-cycle">
+          <div class="reactive-cycle-label">The Reactive Adaptation Cycle</div>
+          <div class="cycle-steps">
+            <div class="cycle-step"><div class="cycle-dot up"></div><div class="cycle-text">Climb — momentum builds, confidence grows</div></div>
+            <div class="cycle-step"><div class="cycle-dot down"></div><div class="cycle-text">Drop — something shifts, progress stalls</div></div>
+            <div class="cycle-step"><div class="cycle-dot up"></div><div class="cycle-text">Recover — back to the same strategy, same effort</div></div>
+            <div class="cycle-step"><div class="cycle-dot down"></div><div class="cycle-text">Drop again — self-trust erodes a little more</div></div>
+            <div class="cycle-step dim"><div class="cycle-dot down"></div><div class="cycle-text">Repeat — until the loop becomes the identity</div></div>
+          </div>
+        </div>
       </div>
       <div>
         <ul class="problem-list">
           <li>You don't have a motivation problem. You have a self-trust problem.</li>
           <li>Confidence is conditional — it depends on context. Self-trust is portable.</li>
+          <li>Stability has an expiry date. If you never use it to update the system, it becomes stagnation.</li>
           <li>The gap between your high-capacity self and who you show up as has a name: the Foundation Gap.</li>
           <li>Thinking about doing the thing is not the same as doing the thing. Your brain can't tell the difference. The marketplace can.</li>
           <li>Action comes before motivation. Every time. The formula most people use is backwards.</li>
@@ -377,6 +411,23 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
     </div>
   </div>
 </section>
+
+<!-- TWO TRUTHS BAND -->
+<div class="truths-band">
+  <div class="truths-inner">
+    <div class="truths-eyebrow">Two Fundamental Truths</div>
+    <div class="truths-grid">
+      <div class="truth-card">
+        <div class="truth-statement">Chaos doesn't punish<br><em>mistakes.</em><br>It punishes stagnation.</div>
+        <div class="truth-body">You're not failing because you're making the wrong moves. You're failing because you've stopped making new ones. The system can't update from where you're standing.</div>
+      </div>
+      <div class="truth-card">
+        <div class="truth-statement">Momentum is self-trust<br><em>preserved</em><br>across time.</div>
+        <div class="truth-body">It's not a feeling. It's proof — proof that you can move, learn, adapt, and still know who you are. You build it from action, not intention. Evidence, not motivation.</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- MODULES -->
 <section class="section modules-section" id="programme">
@@ -579,8 +630,8 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 
 <!-- CTA -->
 <section class="cta-section">
-  <h2 class="cta-title">The gap doesn't<br>close itself.</h2>
-  <p class="cta-body">You already know who you could be. The only thing between that version and this one is the work — and you can start it right now, for $97.</p>
+  <h2 class="cta-title">You've been depositing<br>your entire life.<br>Time to withdraw.</h2>
+  <p class="cta-body">You've built the competence. You've done the work. The only thing between who you are and who you're capable of being is the structural problem underneath — and this programme finds it.</p>
   <button class="btn-cta" onclick="openModal()">Get the Programme — $97 →</button>
 </section>
 
