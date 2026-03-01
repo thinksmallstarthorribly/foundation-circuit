@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Life Circuitry — Think Small, Start Horribly</title>
+<title>Life Circuitry — For People Who Are Capable But Stuck</title>
 <link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#1a1a1a">
-<meta name="description" content="The complete framework for closing the gap between who you know you can be and who you actually show up as. 7 interactive modules. Built by Alex Cooper.">
+<meta name="description" content="You're capable. You know what to do. You're just not doing it. Life Circuitry is the programme that fixes the actual problem. 7 interactive modules. Built by Alex Cooper.">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --teal:#5ec5cc;--teal-d:#3aabb3;--teal-p:#eaf7f8;--teal-m:#b8e8eb;
-  --yellow:#f5c842;--yp:#fef9e7;
+  --yellow:#f5c842;
   --red:#e05555;--rp:#fdf1f1;
   --green:#27ae60;
   --charcoal:#1a1a1a;--mid:#444;--light:#888;
@@ -38,28 +38,25 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 .hero-inner{max-width:1100px;margin:0 auto;padding:80px 40px;position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
 @media(max-width:768px){.hero-inner{grid-template-columns:1fr;gap:48px;padding:60px 24px}}
 .hero-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
-.hero-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,8vw,88px);font-weight:900;text-transform:uppercase;letter-spacing:0.01em;line-height:0.9;color:#fff;margin-bottom:24px}
+.hero-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(52px,8vw,88px);font-weight:900;text-transform:uppercase;letter-spacing:0.01em;line-height:0.92;color:#fff;margin-bottom:28px}
 .hero-title em{color:var(--teal);font-style:normal;display:block}
-.hero-body{font-size:17px;line-height:1.7;color:rgba(255,255,255,0.55);margin-bottom:36px;max-width:480px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-.btn-hero-primary{font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:18px 32px;background:var(--teal);color:#fff;text-decoration:none;transition:all 0.2s}
+.hero-body{font-size:18px;line-height:1.7;color:rgba(255,255,255,0.6);margin-bottom:16px;max-width:480px}
+.hero-body-sub{font-size:15px;line-height:1.7;color:rgba(255,255,255,0.38);margin-bottom:36px;max-width:460px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.btn-hero-primary{font-size:14px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:18px 36px;background:var(--teal);color:#fff;text-decoration:none;transition:all 0.2s;display:inline-block}
 .btn-hero-primary:hover{background:var(--teal-d);transform:translateY(-1px)}
-.btn-hero-sec{font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:18px 28px;border:2px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.2s}
+.btn-hero-sec{font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:18px 28px;border:2px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6);text-decoration:none;transition:all 0.2s;display:inline-block}
 .btn-hero-sec:hover{border-color:rgba(255,255,255,0.4);color:#fff}
-.hero-stats{display:flex;gap:32px;margin-top:48px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:32px;flex-wrap:wrap;padding-top:36px;border-top:1px solid rgba(255,255,255,0.07)}
 .hero-stat{border-left:2px solid var(--teal);padding-left:16px}
 .hero-stat-num{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;color:#fff;line-height:1}
-.hero-stat-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:2px}
-
-/* MODULE PREVIEW CARD (hero right) */
-.hero-preview{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:28px}
-.hp-title{font-size:9px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
-.hp-mod{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06)}
-.hp-mod:last-child{border-bottom:none}
-.hp-num{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;color:rgba(255,255,255,0.2);min-width:24px}
-.hp-name{font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);flex:1}
-.hp-type{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.2)}
-@media(max-width:768px){.hero-preview{display:none}}
+.hero-stat-label{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:2px}
+.hero-photo-wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:0}
+.hero-photo{width:100%;max-width:420px;aspect-ratio:3/4;object-fit:cover;object-position:top center;display:block;filter:grayscale(20%)}
+.hero-photo-caption{width:100%;max-width:420px;background:var(--teal);padding:16px 20px;display:flex;align-items:center;gap:12px}
+.hero-photo-name{font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:var(--charcoal)}
+.hero-photo-role{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(26,26,26,0.55);margin-top:2px}
+@media(max-width:768px){.hero-photo-wrap{display:none}}
 
 /* ── SECTIONS ── */
 .section{padding:96px 40px}
@@ -69,107 +66,149 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 .sec-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,5vw,56px);font-weight:900;text-transform:uppercase;letter-spacing:0.02em;line-height:1;margin-bottom:20px}
 .sec-body{font-size:16px;line-height:1.7;color:var(--mid);max-width:600px}
 
-/* PROBLEM SECTION */
-.problem-section{background:var(--charcoal)}
-.problem-section .sec-title{color:#fff}
-.problem-section .sec-body{color:rgba(255,255,255,0.5)}
-.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px}
-@media(max-width:640px){.problem-grid{grid-template-columns:1fr}}
-.problem-card{padding:28px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07)}
-.problem-card.highlight{background:rgba(94,197,204,0.06);border-color:rgba(94,197,204,0.15)}
-.prob-icon{font-size:24px;margin-bottom:12px}
-.prob-title{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:0.06em;color:rgba(255,255,255,0.7);margin-bottom:8px}
-.prob-desc{font-size:13px;line-height:1.6;color:rgba(255,255,255,0.35)}
-.problem-card.highlight .prob-title{color:var(--teal)}
-.problem-card.highlight .prob-desc{color:rgba(255,255,255,0.55)}
+/* ── THE GAP ── */
+.gap-section{background:var(--charcoal);padding:80px 40px 0}
+@media(max-width:768px){.gap-section{padding:64px 24px 0}}
+.gap-inner{max-width:1100px;margin:0 auto}
+.gap-two{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px}
+@media(max-width:640px){.gap-two{grid-template-columns:1fr}}
+.gap-side{padding:40px}
+.gap-side.now{background:rgba(224,85,85,0.06);border:1px solid rgba(224,85,85,0.12)}
+.gap-side.after{background:rgba(94,197,204,0.06);border:1px solid rgba(94,197,204,0.12)}
+.gap-label{font-size:10px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;margin-bottom:20px}
+.gap-side.now .gap-label{color:var(--red)}
+.gap-side.after .gap-label{color:var(--teal)}
+.gap-item{font-size:14px;line-height:1.7;color:rgba(255,255,255,0.5);padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:baseline;gap:10px}
+.gap-item:last-child{border-bottom:none}
+.gap-side.now .gap-item::before{content:'•';color:var(--red);flex-shrink:0}
+.gap-side.after .gap-item::before{content:'→';color:var(--teal);flex-shrink:0}
+.gap-side.after .gap-item{color:rgba(255,255,255,0.75)}
+.gap-bridge{background:rgba(94,197,204,0.08);border-top:1px solid rgba(94,197,204,0.15);border-bottom:1px solid rgba(94,197,204,0.15);padding:28px 40px;margin-top:0;display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+@media(max-width:640px){.gap-bridge{padding:24px;gap:16px}}
+.gap-bridge-text{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,30px);font-weight:900;text-transform:uppercase;color:#fff;line-height:1.1;flex:1;min-width:200px}
+.gap-bridge-text em{color:var(--teal);font-style:normal}
+.gap-bridge-sub{font-size:14px;color:rgba(255,255,255,0.4);line-height:1.6;max-width:380px}
 
-/* MODULES SECTION */
+/* ── WHO THIS IS FOR ── */
+.for-section{background:var(--charcoal);padding:64px 40px 96px}
+@media(max-width:768px){.for-section{padding:48px 24px 64px}}
+.for-section .sec-title{color:#fff}
+.for-section .sec-body{color:rgba(255,255,255,0.45);margin-bottom:48px}
+.for-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:0}
+@media(max-width:640px){.for-grid{grid-template-columns:1fr}}
+.for-card{padding:28px 32px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07)}
+.for-card.yes{background:rgba(94,197,204,0.05);border-color:rgba(94,197,204,0.15)}
+.for-marker{font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;margin-bottom:16px}
+.for-card.yes .for-marker{color:var(--teal)}
+.for-card.no .for-marker{color:rgba(255,255,255,0.2)}
+.for-item{font-size:14px;line-height:1.7;color:rgba(255,255,255,0.45);padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:baseline;gap:10px}
+.for-item:last-child{border-bottom:none}
+.for-card.yes .for-item{color:rgba(255,255,255,0.7)}
+.for-item::before{flex-shrink:0;font-size:12px;margin-top:1px}
+.for-card.yes .for-item::before{content:'→';color:var(--teal)}
+.for-card.no .for-item::before{content:'✗';color:rgba(255,255,255,0.15)}
+
+/* ── THE REAL PROBLEM ── */
+.problem-section{background:#fff;border-top:1px solid var(--rule)}
+.problem-two-col{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-top:56px}
+@media(max-width:768px){.problem-two-col{grid-template-columns:1fr;gap:40px}}
+.problem-pull{font-family:'Barlow Condensed',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:900;text-transform:uppercase;line-height:1.05;color:var(--charcoal);margin-bottom:24px}
+.problem-pull em{color:var(--teal);font-style:normal}
+.problem-body{font-size:15px;line-height:1.8;color:var(--mid);margin-bottom:16px}
+.problem-list{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:0}
+.problem-list li{font-size:14px;line-height:1.6;color:var(--mid);padding:12px 0;border-bottom:1px solid var(--rule);display:flex;align-items:baseline;gap:12px}
+.problem-list li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px}
+
+/* ── MODULES ── */
 .modules-section{background:var(--bg)}
 .modules-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:2px;margin-top:48px}
 .mod-card{background:var(--card);border:1px solid var(--rule);padding:28px;position:relative;transition:all 0.2s}
 .mod-card:hover{border-color:var(--teal-m);box-shadow:0 4px 24px rgba(94,197,204,0.1)}
-.mod-card-num{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:900;letter-spacing:0.1em;color:var(--light);margin-bottom:12px;text-transform:uppercase}
+.mod-card-num{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:900;letter-spacing:0.12em;color:var(--light);margin-bottom:12px;text-transform:uppercase}
 .mod-card-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;letter-spacing:0.04em;line-height:1.1;margin-bottom:10px}
 .mod-card-desc{font-size:13px;line-height:1.6;color:var(--mid);margin-bottom:16px}
 .mod-card-tag{font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal-d);background:var(--teal-p);padding:3px 8px}
 .mod-card-accent{position:absolute;bottom:0;left:0;right:0;height:3px}
 
-/* ALEX SECTION */
-.alex-section{background:#fff;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.alex-inner{display:grid;grid-template-columns:400px 1fr;gap:80px;align-items:center}
-@media(max-width:768px){.alex-inner{grid-template-columns:1fr;gap:40px}}
-.alex-badge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal-d);background:var(--teal-p);padding:6px 14px;margin-bottom:20px}
-.alex-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(32px,4vw,48px);font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:20px}
-.alex-body{font-size:15px;line-height:1.8;color:var(--mid);margin-bottom:16px}
-.alex-quote{padding:24px 28px;background:var(--charcoal);margin-top:24px}
-.alex-quote-text{font-size:17px;font-style:italic;color:rgba(255,255,255,0.75);line-height:1.6;margin-bottom:12px}
+/* ── HOW IT WORKS ── */
+.get-section{background:var(--bg)}
+.get-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:48px}
+@media(max-width:640px){.get-grid{grid-template-columns:1fr}}
+.get-card{background:var(--card);border:1px solid var(--rule);padding:32px}
+.get-num{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:900;color:var(--teal-m);line-height:1;margin-bottom:12px}
+.get-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:8px;color:var(--charcoal)}
+.get-body{font-size:13px;line-height:1.7;color:var(--mid)}
+
+/* ── ALEX ── */
+.alex-section{background:var(--charcoal)}
+.alex-inner{display:grid;grid-template-columns:380px 1fr;gap:80px;align-items:start}
+@media(max-width:900px){.alex-inner{grid-template-columns:1fr;gap:40px}}
+.alex-photo{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top center;display:block}
+.alex-photo-wrap{position:relative;flex-shrink:0}
+.alex-badge{display:inline-block;font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal-d);background:rgba(94,197,204,0.12);padding:6px 14px;margin-bottom:20px;border:1px solid rgba(94,197,204,0.2)}
+.alex-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,4vw,52px);font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:24px;color:#fff}
+.alex-body{font-size:15px;line-height:1.8;color:rgba(255,255,255,0.5);margin-bottom:16px}
+.alex-body strong{color:rgba(255,255,255,0.8);font-weight:700}
+.alex-quote{padding:24px 28px;border-left:3px solid var(--teal);margin-top:28px}
+.alex-quote-text{font-size:17px;font-style:italic;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:12px}
 .alex-quote-attr{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal)}
-.alex-visual{background:var(--charcoal);padding:40px;display:flex;flex-direction:column;gap:16px}
-.av-stat{display:flex;align-items:center;gap:16px}
-.av-num{font-family:'Barlow Condensed',sans-serif;font-size:40px;font-weight:900;color:var(--teal);min-width:70px;line-height:1}
-.av-label{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.4}
-.av-divider{height:1px;background:rgba(255,255,255,0.06)}
+@media(max-width:900px){.alex-photo{max-height:340px;object-position:center top}}
+
+/* ── GUARANTEE BAND ── */
+.guarantee-band{background:var(--teal-p);border-top:2px solid var(--teal-m);border-bottom:2px solid var(--teal-m);padding:40px}
+@media(max-width:640px){.guarantee-band{padding:32px 24px}}
+.guarantee-inner{max-width:840px;margin:0 auto;display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.guarantee-icon{font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;color:var(--teal-d);line-height:1;flex-shrink:0}
+.guarantee-text-wrap{flex:1;min-width:200px}
+.guarantee-title{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;letter-spacing:0.04em;color:var(--charcoal);margin-bottom:8px}
+.guarantee-body{font-size:14px;line-height:1.7;color:var(--mid)}
 
 /* ── PRICING ── */
-.pricing-section{background:var(--charcoal)}
+.pricing-section{background:var(--charcoal);padding:96px 40px}
+@media(max-width:768px){.pricing-section{padding:64px 24px}}
 .pricing-section .sec-title{color:#fff}
-.pricing-section .sec-body{color:rgba(255,255,255,0.45)}
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;margin-top:48px}
-@media(max-width:768px){.pricing-grid{grid-template-columns:1fr}}
-.pricing-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);padding:32px;display:flex;flex-direction:column;position:relative;transition:all 0.2s}
-.pricing-card.featured{background:rgba(94,197,204,0.07);border-color:rgba(94,197,204,0.25);transform:scale(1.02)}
-@media(max-width:768px){.pricing-card.featured{transform:none}}
-.pricing-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:9px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;background:var(--teal);color:#fff;padding:4px 16px;white-space:nowrap}
-.pricing-tier{font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:16px}
-.pricing-name{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;letter-spacing:0.04em;color:#fff;margin-bottom:8px}
-.pricing-price{font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:900;line-height:1;color:#fff;margin-bottom:4px}
-.pricing-price sup{font-size:24px;vertical-align:super;font-weight:700;color:var(--teal)}
-.pricing-price-note{font-size:12px;color:rgba(255,255,255,0.3);margin-bottom:24px}
-.pricing-divider{height:1px;background:rgba(255,255,255,0.07);margin-bottom:24px}
-.pricing-features{list-style:none;flex:1;margin-bottom:32px}
-.pricing-features li{font-size:13px;color:rgba(255,255,255,0.55);padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.04);display:flex;align-items:flex-start;gap:10px;line-height:1.4}
-.pricing-features li::before{content:'✓';color:var(--teal);font-weight:900;font-size:12px;margin-top:1px;flex-shrink:0}
-.pricing-features li.na{color:rgba(255,255,255,0.2)}
-.pricing-features li.na::before{content:'—';color:rgba(255,255,255,0.15)}
-.pricing-card.featured .pricing-features li{color:rgba(255,255,255,0.75)}
-.btn-pricing{width:100%;padding:16px;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;text-align:center;text-decoration:none;display:block}
-.btn-pricing.primary{background:var(--teal);border:none;color:#fff}
-.btn-pricing.primary:hover{background:var(--teal-d)}
-.btn-pricing.outline{background:transparent;border:2px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.6)}
-.btn-pricing.outline:hover{border-color:var(--teal);color:var(--teal)}
-.pricing-guarantee{text-align:center;margin-top:36px;font-size:13px;color:rgba(255,255,255,0.3)}
-.pricing-guarantee strong{color:rgba(255,255,255,0.55)}
+.pricing-section .sec-body{color:rgba(255,255,255,0.4);margin-bottom:56px}
+.pricing-single{max-width:560px;margin:0 auto;background:rgba(255,255,255,0.03);border:1px solid rgba(94,197,204,0.25);padding:48px}
+@media(max-width:640px){.pricing-single{padding:32px 24px}}
+.pricing-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+.pricing-name{font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:900;text-transform:uppercase;letter-spacing:0.04em;color:#fff;margin-bottom:8px}
+.pricing-price{font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:900;line-height:1;color:#fff;margin:20px 0 4px}
+.pricing-price sup{font-size:28px;vertical-align:super;font-weight:700;color:var(--teal)}
+.pricing-note{font-size:13px;color:rgba(255,255,255,0.3);margin-bottom:32px}
+.pricing-divider{height:1px;background:rgba(255,255,255,0.08);margin-bottom:32px}
+.pricing-features{list-style:none;margin-bottom:36px;display:flex;flex-direction:column;gap:0}
+.pricing-features li{font-size:14px;color:rgba(255,255,255,0.65);padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:baseline;gap:12px;line-height:1.5}
+.pricing-features li::before{content:'✓';color:var(--teal);font-weight:900;font-size:13px;flex-shrink:0}
+.btn-buy{display:block;width:100%;padding:20px;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;text-align:center;text-decoration:none;background:var(--teal);border:none;color:#fff;margin-bottom:16px}
+.btn-buy:hover{background:var(--teal-d);transform:translateY(-1px)}
+.pricing-mini-guarantee{text-align:center;font-size:12px;color:rgba(255,255,255,0.25);line-height:1.6;margin-bottom:0}
+.pricing-mini-guarantee strong{color:rgba(255,255,255,0.45)}
+.pricing-coaching{max-width:560px;margin:16px auto 0;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);padding:24px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.coaching-text{font-size:13px;color:rgba(255,255,255,0.4);line-height:1.5}
+.coaching-text strong{color:rgba(255,255,255,0.7);display:block;font-size:15px;margin-bottom:4px}
+.btn-coaching{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:10px 20px;border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.5);text-decoration:none;transition:all 0.2s;white-space:nowrap}
+.btn-coaching:hover{border-color:var(--teal);color:var(--teal)}
 
-/* TESTIMONIAL / SOCIAL PROOF */
-.proof-section{background:var(--bg)}
-.proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:48px}
-@media(max-width:640px){.proof-grid{grid-template-columns:1fr}}
-.proof-card{background:var(--card);border:1px solid var(--rule);padding:28px}
-.proof-text{font-size:14px;line-height:1.7;color:var(--mid);margin-bottom:16px;font-style:italic}
-.proof-author{font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--light)}
-.proof-author strong{color:var(--charcoal);display:block;font-size:13px;text-transform:none;letter-spacing:0}
-.proof-stars{color:var(--teal);font-size:14px;margin-bottom:10px}
-
-/* FAQ */
+/* ── FAQ ── */
 .faq-section{background:#fff;border-top:1px solid var(--rule)}
 .faq-list{max-width:720px;margin:48px auto 0}
 .faq-item{border-bottom:1px solid var(--rule)}
 .faq-q{padding:20px 0;font-size:15px;font-weight:700;color:var(--charcoal);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;line-height:1.4}
 .faq-q:hover{color:var(--teal-d)}
 .faq-icon{font-size:20px;font-weight:300;flex-shrink:0;transition:transform 0.2s;color:var(--light)}
-.faq-a{font-size:14px;line-height:1.7;color:var(--mid);padding:0 0 20px;display:none}
+.faq-a{font-size:14px;line-height:1.8;color:var(--mid);padding:0 0 20px;display:none}
 .faq-item.open .faq-a{display:block}
 .faq-item.open .faq-icon{transform:rotate(45deg)}
 
-/* CTA SECTION */
-.cta-section{background:var(--teal);padding:80px 40px;text-align:center}
-.cta-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;color:rgba(0,0,0,0.4);margin-bottom:16px}
-.cta-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(36px,6vw,64px);font-weight:900;text-transform:uppercase;letter-spacing:0.02em;line-height:1;color:var(--charcoal);margin-bottom:20px}
-.cta-body{font-size:16px;color:rgba(0,0,0,0.55);max-width:480px;margin:0 auto 36px;line-height:1.6}
-.btn-cta{display:inline-block;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:18px 40px;background:var(--charcoal);color:#fff;text-decoration:none;transition:all 0.2s}
+/* ── CTA ── */
+.cta-section{background:var(--teal);padding:96px 40px;text-align:center}
+@media(max-width:768px){.cta-section{padding:64px 24px}}
+.cta-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(40px,7vw,72px);font-weight:900;text-transform:uppercase;letter-spacing:0.02em;line-height:0.95;color:var(--charcoal);margin-bottom:24px}
+.cta-body{font-size:17px;color:rgba(0,0,0,0.5);max-width:480px;margin:0 auto 40px;line-height:1.6}
+.btn-cta{display:inline-block;font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:20px 48px;background:var(--charcoal);color:#fff;text-decoration:none;transition:all 0.2s}
 .btn-cta:hover{background:#000;transform:translateY(-1px)}
 
-/* FOOTER */
+/* ── FOOTER ── */
 .footer{background:var(--charcoal);padding:48px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
 .footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal)}
 .footer-logo span{color:rgba(255,255,255,0.25)}
@@ -177,6 +216,25 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 .footer-links{display:flex;gap:20px}
 .footer-link{font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s}
 .footer-link:hover{color:var(--teal)}
+
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:1000;align-items:center;justify-content:center;padding:24px}
+.modal-overlay.open{display:flex}
+.modal{background:#fff;max-width:480px;width:100%;position:relative;overflow:hidden}
+.modal-header{background:var(--charcoal);padding:28px 32px}
+.modal-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.modal-title{font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:900;text-transform:uppercase;color:#fff}
+.modal-price{font-family:'Barlow Condensed',sans-serif;font-size:48px;font-weight:900;color:var(--teal);line-height:1}
+.modal-body{padding:28px 32px;display:flex;flex-direction:column;gap:12px}
+.modal-body-text{font-size:13px;color:var(--mid);line-height:1.6;margin-bottom:4px}
+.btn-modal{display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 24px;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;transition:all 0.2s;cursor:pointer;border:none;width:100%}
+.btn-modal.paypal{background:#0070ba;color:#fff}
+.btn-modal.paypal:hover{background:#005ea6}
+.btn-modal.email{background:var(--bg);color:var(--charcoal);border:1px solid var(--rule)}
+.btn-modal.email:hover{border-color:var(--teal);color:var(--teal-d)}
+.modal-close{position:absolute;top:16px;right:16px;background:rgba(255,255,255,0.1);border:none;color:rgba(255,255,255,0.5);width:32px;height:32px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all 0.15s}
+.modal-close:hover{background:rgba(255,255,255,0.2);color:#fff}
+.modal-guarantee{font-size:11px;color:var(--light);text-align:center;padding:0 32px 24px;line-height:1.6}
 </style>
 </head>
 <body>
@@ -185,11 +243,11 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 <nav class="nav">
   <a href="#" class="nav-logo">Life Circuitry <span>/ Think Small</span></a>
   <div class="nav-links">
-    <a href="#modules" class="nav-link">Modules</a>
+    <a href="#programme" class="nav-link">Programme</a>
     <a href="#about" class="nav-link">About</a>
     <a href="#pricing" class="nav-link">Pricing</a>
     <a href="access.html" class="nav-link">Login</a>
-    <a href="#pricing" class="nav-cta">Get Started</a>
+    <a href="#pricing" class="nav-cta">Get Started →</a>
   </div>
 </nav>
 
@@ -198,116 +256,181 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
   <div class="hero-bg"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow">Think Small, Start Horribly — Alex Cooper</div>
-      <h1 class="hero-title">Close the<br><em>Foundation Gap.</em></h1>
-      <p class="hero-body">The interactive programme for closing the gap between your high-capacity self and who you actually show up as — every day. 7 modules. Evidence-based frameworks. Built to run on your phone.</p>
+      <div class="hero-eyebrow">Alex Cooper — Think Small, Start Horribly</div>
+      <h1 class="hero-title">Capable.<br>But<br><em>Stuck.</em></h1>
+      <p class="hero-body">You know what to do. You've always known. The problem isn't knowledge, motivation, or discipline.</p>
+      <p class="hero-body-sub">The problem is the missing layer underneath all of it — and that's what this programme fixes.</p>
       <div class="hero-actions">
-        <a href="#pricing" class="btn-hero-primary">Start the Programme →</a>
-        <a href="#modules" class="btn-hero-sec">See All 7 Modules</a>
+        <a href="#pricing" class="btn-hero-primary">Get the Programme →</a>
+        <a href="#programme" class="btn-hero-sec">See What's Inside</a>
       </div>
       <div class="hero-stats">
-        <div class="hero-stat"><div class="hero-stat-num">7</div><div class="hero-stat-label">Interactive<br>Modules</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">20+</div><div class="hero-stat-label">Frameworks &amp;<br>Diagnostics</div></div>
-        <div class="hero-stat"><div class="hero-stat-num">∞</div><div class="hero-stat-label">Progress<br>Saved Locally</div></div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">7</div>
+          <div class="hero-stat-label">Interactive<br>Modules</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">20+</div>
+          <div class="hero-stat-label">Frameworks &amp;<br>Diagnostics</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-num">$97</div>
+          <div class="hero-stat-label">One-time.<br>Lifetime access.</div>
+        </div>
       </div>
     </div>
-    <div class="hero-preview">
-      <div class="hp-title">Programme Contents</div>
-      <div class="hp-mod"><div class="hp-num">01</div><div class="hp-name">The Momentum Formula</div><div class="hp-type">Foundation</div></div>
-      <div class="hp-mod"><div class="hp-num">02</div><div class="hp-name">The Stuck Framework</div><div class="hp-type">Diagnostic</div></div>
-      <div class="hp-mod"><div class="hp-num">03</div><div class="hp-name">Escaping the Conceptual Landscape</div><div class="hp-type">20 Barriers</div></div>
-      <div class="hp-mod"><div class="hp-num">04</div><div class="hp-name">Foundation Circuit</div><div class="hp-type">Capacity Audit</div></div>
-      <div class="hp-mod"><div class="hp-num">05</div><div class="hp-name">Version of Self</div><div class="hp-type">Identity</div></div>
-      <div class="hp-mod"><div class="hp-num">06</div><div class="hp-name">The Marketplace</div><div class="hp-type">Value Strategy</div></div>
-      <div class="hp-mod"><div class="hp-num">07</div><div class="hp-name">Re-Entering Early Learning</div><div class="hp-type">Transitions</div></div>
+    <div class="hero-photo-wrap">
+      <img src="assets/alex-cooper.jpg" alt="Alex Cooper" class="hero-photo">
+      <div class="hero-photo-caption">
+        <div>
+          <div class="hero-photo-name">Alex Cooper</div>
+          <div class="hero-photo-role">Life Circuitry — Think Small, Start Horribly</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PROBLEM -->
-<section class="section problem-section">
+<!-- THE GAP — before/after -->
+<div class="gap-section">
+  <div class="gap-inner">
+    <div class="sec-eyebrow" style="color:var(--teal)">The Foundation Gap</div>
+    <h2 class="sec-title" style="color:#fff;margin-bottom:8px">Where you are vs.<br>where you know you could be.</h2>
+    <p class="sec-body" style="color:rgba(255,255,255,0.4)">This isn't about ambition. You already know exactly who you're capable of being. The gap between that person and who's showing up right now — that's what this programme is built to close.</p>
+    <div class="gap-two">
+      <div class="gap-side now">
+        <div class="gap-label">Right now</div>
+        <div class="gap-item">Starting with momentum, then quietly disappearing</div>
+        <div class="gap-item">Knowing exactly what to do — and not doing it</div>
+        <div class="gap-item">Performing in some areas, invisible in others</div>
+        <div class="gap-item">Restarting the same loop, getting the same result</div>
+        <div class="gap-item">Not trusting yourself to follow through anymore</div>
+        <div class="gap-item">Reading this and feeling like it's written about you</div>
+      </div>
+      <div class="gap-side after">
+        <div class="gap-label">After the programme</div>
+        <div class="gap-item">You've mapped exactly where the loop breaks — and why</div>
+        <div class="gap-item">You have a start protocol you can deploy without motivation</div>
+        <div class="gap-item">You've identified the specific barriers keeping you conceptual</div>
+        <div class="gap-item">Your self-trust is rebuilt on actual evidence, not intention</div>
+        <div class="gap-item">You know which version of yourself you're operating from — and how to shift it</div>
+        <div class="gap-item">The gap has a name. And a fix.</div>
+      </div>
+    </div>
+    <div class="gap-bridge">
+      <div class="gap-bridge-text">The gap isn't a character flaw.<br><em>It's an undiagnosed structural problem.</em></div>
+      <div class="gap-bridge-sub">Every person who's been stuck in the same loop for years has the same thing underneath. Life Circuitry is built to find it — and fix it.</div>
+    </div>
+  </div>
+</div>
+
+<!-- WHO THIS IS FOR -->
+<section class="section for-section">
   <div class="section-inner">
-    <div class="sec-eyebrow">The Problem We Don't Talk About</div>
-    <h2 class="sec-title" style="color:#fff">You know what to do.<br>You're just not doing it.</h2>
-    <p class="sec-body">It's not a knowledge problem. It's not a motivation problem. It's a foundation problem — the missing layer between capacity and performance that no one is teaching.</p>
-    <div class="problem-grid">
-      <div class="problem-card">
-        <div class="prob-icon">📚</div>
-        <div class="prob-title">You've read the books</div>
-        <div class="prob-desc">You know the frameworks. You understand the theory. And you're still stuck in the same place.</div>
+    <div class="sec-eyebrow" style="color:var(--teal)">Who This Is For</div>
+    <h2 class="sec-title" style="color:#fff">You'll recognise yourself<br>in this immediately.</h2>
+    <p class="sec-body">This isn't for people who don't know what they want. It's for people who know exactly what they want — and keep finding themselves not doing it.</p>
+    <div class="for-grid" style="margin-top:48px">
+      <div class="for-card yes">
+        <div class="for-marker">This is for you if —</div>
+        <div class="for-item">You start things with energy and fade out before they matter</div>
+        <div class="for-item">You know the theory but can't seem to apply it consistently</div>
+        <div class="for-item">You've tried motivation, discipline, habits — and none of it sticks</div>
+        <div class="for-item">You're capable in some areas and completely stuck in others</div>
+        <div class="for-item">You keep restarting the same thing with the same result</div>
+        <div class="for-item">You don't trust yourself to follow through anymore</div>
       </div>
-      <div class="problem-card">
-        <div class="prob-icon">🔄</div>
-        <div class="prob-title">The stuck loop is real</div>
-        <div class="prob-desc">Start strong. Fade. Quit. Feel bad. Start again. The cycle isn't a character flaw — it's an unaddressed structural problem.</div>
+      <div class="for-card no">
+        <div class="for-marker">This is not for you if —</div>
+        <div class="for-item">You're looking for a motivational video to watch and forget</div>
+        <div class="for-item">You want someone to tell you everything will be fine</div>
+        <div class="for-item">You're not willing to be honest about what's actually going on</div>
+        <div class="for-item">You think the answer is more information or a better strategy</div>
+        <div class="for-item">You want accountability without doing the diagnostic first</div>
+        <div class="for-item">You're waiting to feel ready before you start</div>
       </div>
-      <div class="problem-card">
-        <div class="prob-icon">⚡</div>
-        <div class="prob-title">Motivation is the wrong metric</div>
-        <div class="prob-desc">You've been waiting to feel ready, motivated, or inspired. That wait is costing you real time and real results.</div>
+    </div>
+  </div>
+</section>
+
+<!-- THE REAL PROBLEM -->
+<section class="section problem-section" id="problem">
+  <div class="section-inner">
+    <div class="sec-eyebrow">What's Actually Going On</div>
+    <div class="problem-two-col">
+      <div>
+        <div class="problem-pull">The reason you stopped<br>is no longer the problem<br><em>keeping you here.</em></div>
+        <p class="problem-body">Most people go looking for better strategies, more motivation, stronger willpower. They're solving the wrong problem — because the original reason they got stuck has already been replaced by something else entirely.</p>
+        <p class="problem-body">Self-trust collapsed. And without it, nothing else works. Not the frameworks, not the accountability, not the inspiration. The foundation is broken.</p>
+        <p class="problem-body">Life Circuitry doesn't try to motivate you. It maps the gap, identifies what actually broke, and rebuilds the operating system everything else runs on.</p>
       </div>
-      <div class="problem-card highlight">
-        <div class="prob-icon">🔧</div>
-        <div class="prob-title">The Foundation Circuit fixes the actual problem</div>
-        <div class="prob-desc">Not inspiration. Not hacks. A systematic method for closing the gap between who you know you can be and who you actually show up as.</div>
+      <div>
+        <ul class="problem-list">
+          <li>You don't have a motivation problem. You have a self-trust problem.</li>
+          <li>Confidence is conditional — it depends on context. Self-trust is portable.</li>
+          <li>The gap between your high-capacity self and who you show up as has a name: the Foundation Gap.</li>
+          <li>Thinking about doing the thing is not the same as doing the thing. Your brain can't tell the difference. The marketplace can.</li>
+          <li>Action comes before motivation. Every time. The formula most people use is backwards.</li>
+          <li>The loop isn't a character flaw. It's an undiagnosed structural problem — and it has a fix.</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
 <!-- MODULES -->
-<section class="section modules-section" id="modules">
+<section class="section modules-section" id="programme">
   <div class="section-inner">
     <div class="sec-eyebrow">The Programme</div>
     <h2 class="sec-title">7 Modules.<br>One Connected System.</h2>
-    <p class="sec-body">Each module is fully interactive — with reflection prompts, self-assessments, diagnostic tools, and a PDF export of your completed work. Your progress is saved automatically.</p>
+    <p class="sec-body">Each module builds on the last. Each one is interactive — with diagnostics, reflection tools, and a PDF export of your completed work. Your progress saves automatically to your device.</p>
     <div class="modules-grid">
       <div class="mod-card">
         <div class="mod-card-num">Module 01</div>
         <h3 class="mod-card-title">The Momentum Formula</h3>
-        <p class="mod-card-desc">Action precedes motivation — not the other way around. Build the evidence base that creates real self-trust.</p>
+        <p class="mod-card-desc">Action precedes motivation — not the other way around. The formula you've been using is backwards. This module corrects it and builds the evidence base for real self-trust.</p>
         <div class="mod-card-tag">Foundation</div>
         <div class="mod-card-accent" style="background:#5ec5cc"></div>
       </div>
       <div class="mod-card">
         <div class="mod-card-num">Module 02</div>
         <h3 class="mod-card-title">The Stuck Framework</h3>
-        <p class="mod-card-desc">Map the exact loop keeping you stuck. Understand the threshold between mediocrity and real life — and how to cross it.</p>
+        <p class="mod-card-desc">Map the exact loop keeping you stuck. The reason you stopped is no longer the problem — this module finds the actual one, and locates the threshold between where you are and your real life.</p>
         <div class="mod-card-tag">Diagnostic</div>
         <div class="mod-card-accent" style="background:#e05555"></div>
       </div>
       <div class="mod-card">
         <div class="mod-card-num">Module 03</div>
         <h3 class="mod-card-title">Escaping the Conceptual Landscape</h3>
-        <p class="mod-card-desc">20 barriers in 4 groups — Starting, Continuing, Thinking, Adapting. Identify yours. Then cross The Bridge.</p>
+        <p class="mod-card-desc">20 psychological barriers in 4 groups — Starting, Continuing, Thinking, Adapting. Identify yours precisely. Then use The Bridge to cross from theory to actual action.</p>
         <div class="mod-card-tag">20 Barriers Mapped</div>
         <div class="mod-card-accent" style="background:#f5c842"></div>
       </div>
       <div class="mod-card">
         <div class="mod-card-num">Module 04</div>
         <h3 class="mod-card-title">Foundation Circuit</h3>
-        <p class="mod-card-desc">Your two states. Capacity audit with interactive sliders. Recovery phase tracker. Evidence log. The core of the programme.</p>
+        <p class="mod-card-desc">Your two states. An interactive capacity audit. A recovery phase tracker. An evidence log. This is the core of the programme — the workbook you come back to.</p>
         <div class="mod-card-tag">Interactive Workbook</div>
         <div class="mod-card-accent" style="background:#5ec5cc"></div>
       </div>
       <div class="mod-card">
         <div class="mod-card-num">Module 05</div>
         <h3 class="mod-card-title">Version of Self</h3>
-        <p class="mod-card-desc">Identity isn't fixed — it's built. Mindset audit, values selector, and an evidence-based identity statement builder.</p>
+        <p class="mod-card-desc">Identity isn't fixed — it's built from evidence. A mindset audit, a values selector, and an identity statement builder that creates the operating system you actually run from.</p>
         <div class="mod-card-tag">Identity Shift</div>
         <div class="mod-card-accent" style="background:#9b59b6"></div>
       </div>
       <div class="mod-card">
         <div class="mod-card-num">Module 06</div>
         <h3 class="mod-card-title">The Marketplace</h3>
-        <p class="mod-card-desc">5 marketplace principles. 5 stages in the Hierarchy of Value. Where are you — and what's the gap to the next level?</p>
+        <p class="mod-card-desc">Every marketplace trades on value. 5 principles. 5 stages in the Hierarchy of Value. Where are you right now — and what does the gap to the next level actually cost you?</p>
         <div class="mod-card-tag">Value Strategy</div>
         <div class="mod-card-accent" style="background:#e67e22"></div>
       </div>
-      <div class="mod-card" style="grid-column:span 1">
+      <div class="mod-card">
         <div class="mod-card-num">Module 07</div>
         <h3 class="mod-card-title">Re-Entering the Early Learning Phase</h3>
-        <p class="mod-card-desc">The professional trap. Silo effects. 4 diagnostic corrections. Practice framework + Reentry Audit across 5 dimensions.</p>
+        <p class="mod-card-desc">The professional trap: expertise that calcifies into rigidity. 4 diagnostic corrections. A practice framework and reentry audit across 5 dimensions. The final module — and the beginning of what's next.</p>
         <div class="mod-card-tag">Final Module</div>
         <div class="mod-card-accent" style="background:#27ae60"></div>
       </div>
@@ -315,146 +438,103 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
   </div>
 </section>
 
-<!-- ALEX / ABOUT -->
+<!-- HOW IT WORKS -->
+<section class="section get-section">
+  <div class="section-inner">
+    <div class="sec-eyebrow">How It Works</div>
+    <h2 class="sec-title">Not a video course.<br>Not a PDF.</h2>
+    <p class="sec-body">An interactive programme that runs in your browser — on your phone, tablet, or desktop. Your work saves automatically. You own it.</p>
+    <div class="get-grid">
+      <div class="get-card">
+        <div class="get-num">01</div>
+        <div class="get-title">Built for mobile</div>
+        <div class="get-body">Fully responsive. Works on your phone exactly as it does on a desktop. Add it to your home screen and it runs like an app — because it is one.</div>
+      </div>
+      <div class="get-card">
+        <div class="get-num">02</div>
+        <div class="get-title">Your work saves automatically</div>
+        <div class="get-body">Every reflection, every audit score, every evidence log entry — saved to your device automatically. No account required. No cloud. Your data stays yours.</div>
+      </div>
+      <div class="get-card">
+        <div class="get-num">03</div>
+        <div class="get-title">Interactive diagnostics</div>
+        <div class="get-body">Not just reading. Each module has live tools — sliders, selectors, diagnostic questions, evidence logs — that make the work tangible, not theoretical.</div>
+      </div>
+      <div class="get-card">
+        <div class="get-num">04</div>
+        <div class="get-title">PDF export on every module</div>
+        <div class="get-body">When you're done with a module, export your completed work as a PDF — your reflections, your scores, your identity statement. A record of where you were and where you went.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALEX -->
 <section class="section alex-section" id="about">
   <div class="section-inner">
     <div class="alex-inner">
+      <div class="alex-photo-wrap">
+        <img src="assets/alex-cooper.jpg" alt="Alex Cooper" class="alex-photo">
+      </div>
       <div>
         <div class="alex-badge">About the Creator</div>
-        <h2 class="alex-title">Alex Cooper<br>Think Small,<br>Start Horribly.</h2>
-        <p class="alex-body">Alex Cooper built the Life Circuitry methodology after identifying the one thing most coaching and personal development misses entirely: the foundation layer.</p>
-        <p class="alex-body">Most programmes give you inspiration, strategies, and accountability. The Foundation Circuit gives you the operating system those things run on — evidence-based self-trust, capacity awareness, and a systematic approach to closing the gap between who you know you can be and who you actually show up as.</p>
-        <p class="alex-body">The Think Small, Start Horribly philosophy isn't about lowering your standards. It's about closing the gap through imperfect, uncomfortable action — and building real evidence of who you're becoming.</p>
+        <h2 class="alex-title">Alex Cooper.<br>Think Small,<br>Start Horribly.</h2>
+        <p class="alex-body">Alex Cooper built the Life Circuitry methodology after working with hundreds of people who were <strong>capable, informed, and stuck</strong> — and discovering that every single one had the same problem underneath.</p>
+        <p class="alex-body">It wasn't mindset. It wasn't motivation. It wasn't strategy. It was a broken foundation — <strong>self-trust that had collapsed</strong>, and a gap between the person they knew they could be and the person showing up every day.</p>
+        <p class="alex-body">Most programmes treat the symptoms. Life Circuitry goes underneath them. The frameworks in this programme are built from Alex's original IP — developed through direct work, not borrowed from someone else's model.</p>
         <div class="alex-quote">
           <div class="alex-quote-text">"Stop waiting to feel ready. Think Small, Start Horribly. The evidence builds from action — not from preparation."</div>
-          <div class="alex-quote-attr">— Alex Cooper, Life Circuitry</div>
-        </div>
-      </div>
-      <div class="alex-visual">
-        <div class="av-stat">
-          <div class="av-num">7</div>
-          <div class="av-label">Original frameworks built from Alex's IP</div>
-        </div>
-        <div class="av-divider"></div>
-        <div class="av-stat">
-          <div class="av-num">20+</div>
-          <div class="av-label">Psychological barriers mapped &amp; addressed</div>
-        </div>
-        <div class="av-divider"></div>
-        <div class="av-stat">
-          <div class="av-num">100%</div>
-          <div class="av-label">Interactive — your work saves automatically</div>
-        </div>
-        <div class="av-divider"></div>
-        <div class="av-stat">
-          <div class="av-num">PWA</div>
-          <div class="av-label">Works on mobile, tablet and desktop</div>
+          <div class="alex-quote-attr">— Alex Cooper</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SOCIAL PROOF -->
-<section class="section proof-section">
-  <div class="section-inner">
-    <div class="sec-eyebrow">What People Are Saying</div>
-    <h2 class="sec-title">The Gap Was Never<br>About Motivation.</h2>
-    <div class="proof-grid">
-      <div class="proof-card">
-        <div class="proof-stars">★★★★★</div>
-        <p class="proof-text">"I've done every type of coaching and personal development programme. This is the first thing that addressed what was actually broken — not my mindset, but my foundation."</p>
-        <div class="proof-author"><strong>Sarah M.</strong> Operations Director</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-stars">★★★★★</div>
-        <p class="proof-text">"The Conceptual Landscape module alone was worth the entire investment. I could see exactly where I was stuck and exactly what the bridge was. That doesn't happen often."</p>
-        <div class="proof-author"><strong>James R.</strong> Entrepreneur</div>
-      </div>
-      <div class="proof-card">
-        <div class="proof-stars">★★★★★</div>
-        <p class="proof-text">"The fact that it's interactive and everything saves means I actually come back to it. Most programmes are PDFs you open once. This one is alive."</p>
-        <div class="proof-author"><strong>Michelle T.</strong> Consultant</div>
-      </div>
+<!-- GUARANTEE BAND -->
+<div class="guarantee-band">
+  <div class="guarantee-inner">
+    <div class="guarantee-icon">30</div>
+    <div class="guarantee-text-wrap">
+      <div class="guarantee-title">30-Day Guarantee — No Questions Asked</div>
+      <div class="guarantee-body">Complete the first three modules. If you don't find genuine value in what you've uncovered — about yourself, about where you're stuck, about what to do next — reply to your purchase email and you'll receive a full refund. No forms, no hoops. Alex handles it personally.</div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- PRICING -->
 <section class="section pricing-section" id="pricing">
-  <div class="section-inner">
-    <div class="sec-eyebrow" style="color:var(--teal)">Choose Your Access</div>
-    <h2 class="sec-title" style="color:#fff">Three Ways In.</h2>
-    <p class="sec-body">Every tier includes lifetime access to the interactive portal with your progress saved automatically. PDF export on every module.</p>
-    <div class="pricing-grid">
-
-      <!-- STARTER -->
-      <div class="pricing-card">
-        <div class="pricing-tier">Starter</div>
-        <div class="pricing-name">Foundation Pack</div>
-        <div class="pricing-price"><sup>$</sup>97</div>
-        <div class="pricing-price-note">One-time payment — lifetime access</div>
-        <div class="pricing-divider"></div>
-        <ul class="pricing-features">
-          <li>Modules 1–3 interactive access</li>
-          <li>Momentum Formula + Stuck Framework</li>
-          <li>Escaping the Conceptual Landscape</li>
-          <li>20 barriers diagnostic</li>
-          <li>PDF export on all included modules</li>
-          <li>Progress saved automatically</li>
-          <li class="na">Full 7-module programme</li>
-          <li class="na">Foundation Circuit workbook</li>
-          <li class="na">Marketplace strategy module</li>
-        </ul>
-        <a href="#" class="btn-pricing outline" onclick="selectPlan('Foundation Pack','97')">Get Foundation Pack →</a>
-      </div>
-
-      <!-- FULL PROGRAMME -->
-      <div class="pricing-card featured">
-        <div class="pricing-badge">Most Popular</div>
-        <div class="pricing-tier">Full Programme</div>
-        <div class="pricing-name">Life Circuitry Complete</div>
-        <div class="pricing-price"><sup>$</sup>297</div>
-        <div class="pricing-price-note">One-time payment — lifetime access</div>
-        <div class="pricing-divider"></div>
-        <ul class="pricing-features">
-          <li>All 7 modules — full interactive access</li>
-          <li>Momentum Formula + Stuck Framework</li>
-          <li>Conceptual Landscape (20 barriers)</li>
-          <li>Foundation Circuit — full workbook</li>
-          <li>Version of Self — identity builder</li>
-          <li>Marketplace &amp; Hierarchy of Value</li>
-          <li>Re-Entry — practice framework</li>
-          <li>PDF export on every module</li>
-          <li>Progress tracked across all modules</li>
-        </ul>
-        <a href="#" class="btn-pricing primary" onclick="selectPlan('Life Circuitry Complete','297')">Get Full Programme →</a>
-      </div>
-
-      <!-- PREMIUM -->
-      <div class="pricing-card">
-        <div class="pricing-tier">Premium</div>
-        <div class="pricing-name">Circuit + Coaching</div>
-        <div class="pricing-price"><sup>$</sup>997</div>
-        <div class="pricing-price-note">Includes 3×60min 1:1 sessions with Alex</div>
-        <div class="pricing-divider"></div>
-        <ul class="pricing-features">
-          <li>Everything in Life Circuitry Complete</li>
-          <li>3×60min 1:1 coaching with Alex Cooper</li>
-          <li>Personalised module debrief sessions</li>
-          <li>Custom implementation plan</li>
-          <li>Direct access via email for 90 days</li>
-          <li>Priority response on all questions</li>
-          <li>Quarterly check-in session</li>
-          <li>Full programme PDF export kit</li>
-          <li>Lifetime programme updates</li>
-        </ul>
-        <a href="#" class="btn-pricing outline" onclick="selectPlan('Circuit + Coaching','997')">Apply for Coaching →</a>
-      </div>
-
+  <div class="section-inner" style="text-align:center">
+    <div class="sec-eyebrow" style="color:var(--teal)">Get the Programme</div>
+    <h2 class="sec-title" style="color:#fff">One price.<br>Everything included.</h2>
+    <p class="sec-body" style="margin:0 auto 56px">All 7 modules. Lifetime access. Your progress saved automatically. PDF export on every module.</p>
+    <div class="pricing-single">
+      <div class="pricing-eyebrow">Life Circuitry — Full Programme</div>
+      <div class="pricing-name">Complete Access</div>
+      <div class="pricing-price"><sup>$</sup>97</div>
+      <div class="pricing-note">One-time payment — lifetime access — no subscription</div>
+      <div class="pricing-divider"></div>
+      <ul class="pricing-features">
+        <li>All 7 interactive modules — full access immediately</li>
+        <li>The Momentum Formula + Stuck Framework</li>
+        <li>Escaping the Conceptual Landscape — 20 barriers diagnostic</li>
+        <li>Foundation Circuit — full interactive workbook</li>
+        <li>Version of Self — identity statement builder</li>
+        <li>The Marketplace &amp; Hierarchy of Value</li>
+        <li>Re-Entering the Early Learning Phase</li>
+        <li>PDF export on every module</li>
+        <li>Progress saved automatically to your device</li>
+        <li>Works on mobile, tablet and desktop</li>
+      </ul>
+      <button class="btn-buy" onclick="openModal()">Get Immediate Access — $97 →</button>
+      <p class="pricing-mini-guarantee"><strong>30-day guarantee.</strong> Complete 3 modules, find no value — full refund, no questions.</p>
     </div>
-    <div class="pricing-guarantee">
-      <strong>30-day guarantee.</strong> If you complete the first three modules and don't find value, we'll refund in full. No questions asked.
+    <div class="pricing-coaching">
+      <div class="coaching-text">
+        <strong>Want 1:1 coaching with Alex?</strong>
+        Circuit + Coaching includes 3×60min sessions, a personalised implementation plan, and 90 days of direct access.
+      </div>
+      <a href="mailto:hello@thinksmallstarthorribly.com?subject=Circuit + Coaching Enquiry" class="btn-coaching">Enquire →</a>
     </div>
   </div>
 </section>
@@ -463,19 +543,19 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 <section class="section faq-section">
   <div class="section-inner">
     <div class="sec-eyebrow">Questions</div>
-    <h2 class="sec-title" style="text-align:center;max-width:100%">What You Need to Know</h2>
+    <h2 class="sec-title" style="text-align:center">What You Need to Know</h2>
     <div class="faq-list">
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Is this a video course? <span class="faq-icon">+</span></div>
-        <div class="faq-a">No. This is a fully interactive web portal — think less "watch me talk" and more "do the work." Each module has reading, interactive diagnostics, reflection exercises, sliders, selection tools, and evidence logs. Everything saves automatically. You can export a PDF of your completed work at any time.</div>
+        <div class="faq-a">No. This is a fully interactive web portal — think less "watch me talk" and more "do the work." Each module has reading, interactive diagnostics, reflection exercises, sliders, selection tools, and evidence logs. Everything saves automatically to your device. You can export a PDF of your completed work at any time.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">How long does it take to complete? <span class="faq-icon">+</span></div>
-        <div class="faq-a">Each module takes 45–60 minutes to complete honestly. The full programme is approximately 5–7 hours of real work. But the portal is built to be returned to — your answers update as you change, and the evidence log is designed to grow over time.</div>
+        <div class="faq-a">Each module takes 45–90 minutes to complete honestly. The full programme is approximately 6–8 hours of real work. But the portal is built to be returned to — your answers update as you change, and the evidence log is designed to grow over time.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Does it work on mobile? <span class="faq-icon">+</span></div>
-        <div class="faq-a">Yes. The portal is a Progressive Web App — fully responsive and designed for mobile. You can also add it to your home screen for app-like access. All your progress saves locally on your device.</div>
+        <div class="faq-a">Yes. The portal is a Progressive Web App — fully responsive and designed for mobile. You can add it to your home screen for app-like access. All your progress saves locally on your device.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">Where does my data go? <span class="faq-icon">+</span></div>
@@ -483,11 +563,15 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
       </div>
       <div class="faq-item">
         <div class="faq-q" onclick="toggleFaq(this)">What if I already know this stuff? <span class="faq-icon">+</span></div>
-        <div class="faq-a">Then you're in the Conceptual Landscape — and Module 03 is specifically about you. Knowing something and having actually applied it are two different things. The programme is built to surface that gap, not just add to your knowledge pile.</div>
+        <div class="faq-a">Then you're in the Conceptual Landscape — and Module 03 is specifically about you. Knowing something and having actually applied it are two different things. The programme is built to surface that gap precisely, not add to your knowledge pile.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">Is there a payment plan? <span class="faq-icon">+</span></div>
-        <div class="faq-a">Payment plans are available on the Circuit + Coaching tier. Contact hello@thinksmallstarthorribly.com to arrange. The Foundation Pack and Full Programme are single-payment only.</div>
+        <div class="faq-q" onclick="toggleFaq(this)">How do I get access after I pay? <span class="faq-icon">+</span></div>
+        <div class="faq-a">After payment, you'll receive an email with your access code within a few hours. Enter it at the access page and you're in immediately. If you have any issues, email hello@thinksmallstarthorribly.com and Alex will sort it personally.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Why $97 and not more? <span class="faq-icon">+</span></div>
+        <div class="faq-a">The people this is built for are already spending money on things that aren't working. $97 is a low enough barrier to actually start — and high enough to signal this is real work, not a freebie. The goal isn't to extract maximum revenue. It's to get the framework into the hands of people who need it.</div>
       </div>
     </div>
   </div>
@@ -495,158 +579,58 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 
 <!-- CTA -->
 <section class="cta-section">
-  <div class="cta-eyebrow">The Gap Is Waiting</div>
-  <h2 class="cta-title">Think Small.<br>Start Horribly.</h2>
-  <p class="cta-body">The evidence builds from action — not from preparation. You know what to do. This is the framework that makes you actually do it.</p>
-  <a href="#pricing" class="btn-cta">Start the Programme →</a>
+  <h2 class="cta-title">The gap doesn't<br>close itself.</h2>
+  <p class="cta-body">You already know who you could be. The only thing between that version and this one is the work — and you can start it right now, for $97.</p>
+  <button class="btn-cta" onclick="openModal()">Get the Programme — $97 →</button>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-logo">Life Circuitry <span>/ Think Small, Start Horribly</span></div>
+  <div class="footer-copy">Alex Cooper © 2026 — All rights reserved</div>
   <div class="footer-links">
-    <a href="access.html" class="footer-link">Portal Login</a>
+    <a href="access.html" class="footer-link">Login</a>
     <a href="mailto:hello@thinksmallstarthorribly.com" class="footer-link">Contact</a>
   </div>
-  <div class="footer-copy">© 2026 Alex Cooper / Think Small, Start Horribly. All rights reserved.</div>
 </footer>
 
 <!-- PURCHASE MODAL -->
-<style>
-.modal-overlay{display:none;position:fixed;inset:0;z-index:999;background:rgba(0,0,0,0.88);align-items:center;justify-content:center;padding:20px}
-.modal-overlay.open{display:flex}
-.modal-box{background:var(--charcoal);max-width:540px;width:100%;position:relative;overflow:hidden}
-.modal-top{padding:32px 36px 24px;border-bottom:1px solid rgba(255,255,255,0.07)}
-.modal-close{position:absolute;top:14px;right:18px;background:none;border:none;color:rgba(255,255,255,0.35);font-size:26px;cursor:pointer;line-height:1;transition:color 0.2s}
-.modal-close:hover{color:#fff}
-.modal-eyebrow{font-size:9px;font-weight:800;letter-spacing:0.28em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
-.modal-plan{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:900;text-transform:uppercase;color:#fff;margin-bottom:2px}
-.modal-price{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;color:var(--teal);line-height:1;margin-bottom:0}
-.modal-price sup{font-size:24px;vertical-align:super}
-.modal-steps{padding:28px 36px}
-.modal-step{display:flex;gap:16px;margin-bottom:24px;align-items:flex-start}
-.modal-step:last-child{margin-bottom:0}
-.step-num{width:28px;height:28px;border-radius:50%;background:var(--teal);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
-.step-body{}
-.step-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.05em}
-.step-desc{font-size:12px;color:rgba(255,255,255,0.4);line-height:1.6}
-.modal-pay-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:10px;padding:15px 20px;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:800;text-transform:uppercase;letter-spacing:0.07em;text-decoration:none;cursor:pointer;border:none;transition:all 0.2s}
-.modal-pay-btn.paypal{background:#0070ba;color:#fff}
-.modal-pay-btn.paypal:hover{background:#005ea6}
-.modal-pay-btn.email{background:var(--teal);color:#fff}
-.modal-pay-btn.email:hover{background:var(--teal-d)}
-.modal-divider{display:flex;align-items:center;gap:12px;margin:12px 0}
-.modal-divider-line{flex:1;height:1px;background:rgba(255,255,255,0.08)}
-.modal-divider-text{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.25)}
-.modal-footer-note{padding:16px 36px;background:rgba(0,0,0,0.3);font-size:11px;color:rgba(255,255,255,0.25);line-height:1.7;border-top:1px solid rgba(255,255,255,0.06)}
-.modal-footer-note a{color:var(--teal);text-decoration:none}
-</style>
-
-<div id="purchaseModal" class="modal-overlay" onclick="if(event.target===this)closePurchaseModal()">
-  <div class="modal-box">
-    <button class="modal-close" onclick="closePurchaseModal()">×</button>
-
-    <div class="modal-top">
-      <div class="modal-eyebrow">Getting Access</div>
-      <div class="modal-plan" id="modalPlanName"></div>
-      <div class="modal-price"><sup>$</sup><span id="modalPlanPrice"></span></div>
+<div class="modal-overlay" id="purchaseModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <div class="modal-header">
+      <div class="modal-eyebrow">Life Circuitry — Complete Access</div>
+      <div class="modal-title">Get the Programme</div>
+      <div class="modal-price">$97</div>
     </div>
-
-    <div class="modal-steps">
-
-      <!-- STEP 1: PAY -->
-      <div class="modal-step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <div class="step-title">Pay — choose your method</div>
-          <div class="step-desc">PayPal is instant. Or email Alex directly for bank transfer or other arrangements.</div>
-          <a id="paypalBtn" href="#" target="_blank" rel="noopener" class="modal-pay-btn paypal" style="margin-top:12px">
-            Pay with PayPal →
-          </a>
-          <div class="modal-divider"><div class="modal-divider-line"></div><div class="modal-divider-text">or</div><div class="modal-divider-line"></div></div>
-          <a id="emailBtn" href="mailto:hello@thinksmallstarthorribly.com?subject=Life%20Circuitry%20Purchase&body=Hi%20Alex%2C%0A%0AI%27d%20like%20to%20purchase%20the%20programme.%0A%0APlan%3A%20" class="modal-pay-btn email">
-            Email Alex to Pay →
-          </a>
-        </div>
-      </div>
-
-      <!-- STEP 2: RECEIVE CODE -->
-      <div class="modal-step">
-        <div class="step-num">2</div>
-        <div class="step-body">
-          <div class="step-title">Receive your access code</div>
-          <div class="step-desc">Alex sends your unique access code by email — usually within a few hours, often faster.</div>
-        </div>
-      </div>
-
-      <!-- STEP 3: ENTER CODE -->
-      <div class="modal-step">
-        <div class="step-num">3</div>
-        <div class="step-body">
-          <div class="step-title">Enter code and start</div>
-          <div class="step-desc">Go to the <a href="access.html" style="color:var(--teal)">access page</a>, enter your code, and you're in. Saves automatically. Works on any device.</div>
-        </div>
-      </div>
-
+    <div class="modal-body">
+      <p class="modal-body-text">Choose how you'd like to pay. You'll receive your access code by email after payment is confirmed.</p>
+      <a href="https://paypal.me/thinksmallstarthorribly/97USD" class="btn-modal paypal" id="paypalBtn" target="_blank" onclick="closeModal()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff" xmlns="http://www.w3.org/2000/svg"><path d="M7.144 19.532l1.049-5.751c.11-.604.746-1.063 1.36-1.063h5.041c2.732 0 4.53-1.34 5.07-3.866.558-2.625-.98-4.352-3.749-4.352H9.812c-.614 0-1.18.448-1.295 1.052L6.222 17.48c-.088.482.27.94.762.94h.922c.382 0 .7-.274.762-.888z"/></svg>
+        Pay with PayPal
+      </a>
+      <a href="mailto:hello@thinksmallstarthorribly.com?subject=Life Circuitry — Purchase ($97)&body=Hi Alex,%0A%0AI'd like to purchase the Life Circuitry programme ($97).%0A%0APlease send my access code to this email address.%0A%0AThanks" class="btn-modal email">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Pay by Bank Transfer / Email
+      </a>
     </div>
-
-    <div class="modal-footer-note">
-      30-day guarantee — if you complete the first three modules and don't find value, full refund, no questions. Questions? <a href="mailto:hello@thinksmallstarthorribly.com">hello@thinksmallstarthorribly.com</a>
-    </div>
+    <div class="modal-guarantee">30-day guarantee — complete 3 modules, find no value, get a full refund.</div>
   </div>
 </div>
 
 <script>
-// ── PAYPAL CONFIG ─────────────────────────────────────────────────────────────
-// Replace these with your actual PayPal.me links or PayPal button links.
-// Easiest: go to paypal.com/paypalme and set up your PayPal.me link.
-// Format: https://paypal.me/YOURUSERNAME/AMOUNT
-const PAYPAL_BASE = 'https://paypal.me/thinksmallstarthorribly';
-const PLANS = {
-  '97':  { paypal: PAYPAL_BASE + '/97USD',  subject: 'Life Circuitry — Foundation Pack ($97)' },
-  '297': { paypal: PAYPAL_BASE + '/297USD', subject: 'Life Circuitry — Full Programme ($297)' },
-  '997': { paypal: PAYPAL_BASE + '/997USD', subject: 'Life Circuitry — Circuit + Coaching ($997)' },
-};
-// ─────────────────────────────────────────────────────────────────────────────
-
-function selectPlan(name, price){
-  document.getElementById('modalPlanName').textContent = name;
-  document.getElementById('modalPlanPrice').textContent = price;
-
-  const plan = PLANS[price] || {};
-  const paypalBtn = document.getElementById('paypalBtn');
-  const emailBtn  = document.getElementById('emailBtn');
-
-  // PayPal button
-  if(plan.paypal){
-    paypalBtn.href = plan.paypal;
-    paypalBtn.style.display = 'flex';
-  } else {
-    paypalBtn.style.display = 'none';
-  }
-
-  // Email button — pre-fill subject + body
-  const subj = encodeURIComponent(plan.subject || 'Life Circuitry Purchase');
-  const body = encodeURIComponent(`Hi Alex,\n\nI'd like to purchase: ${name} ($${price})\n\nPlease send my access code to this email address.\n\nThanks`);
-  emailBtn.href = `mailto:hello@thinksmallstarthorribly.com?subject=${subj}&body=${body}`;
-
-  document.getElementById('purchaseModal').classList.add('open');
-}
-
-function closePurchaseModal(){
-  document.getElementById('purchaseModal').classList.remove('open');
-}
+function openModal(){ document.getElementById('purchaseModal').classList.add('open'); }
+function closeModal(){ document.getElementById('purchaseModal').classList.remove('open'); }
 function toggleFaq(el){
-  const item=el.parentElement;
-  const wasOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
   if(!wasOpen) item.classList.add('open');
 }
-// Smooth scroll offset fix for sticky nav
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click',e=>{
-    const target=document.querySelector(a.getAttribute('href'));
-    if(target){e.preventDefault();const y=target.getBoundingClientRect().top+window.scrollY-70;window.scrollTo({top:y,behavior:'smooth'})}
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){ e.preventDefault(); const y = target.getBoundingClientRect().top + window.scrollY - 70; window.scrollTo({top:y, behavior:'smooth'}); }
   });
 });
 </script>
