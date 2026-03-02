@@ -179,23 +179,26 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 
 /* ── TESTIMONIAL ── */
 .testi-section{background:var(--bg);border-top:1px solid var(--rule)}
-.testi-inner{max-width:900px;margin:0 auto;padding:96px 40px}
+.testi-inner{max-width:1100px;margin:0 auto;padding:96px 40px}
 @media(max-width:768px){.testi-inner{padding:64px 24px}}
-.testi-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;color:var(--teal);margin-bottom:40px}
-.testi-card{background:var(--card);border:1px solid var(--rule);border-left:4px solid var(--teal);padding:40px 48px;position:relative}
+.testi-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.25em;text-transform:uppercase;color:var(--teal);margin-bottom:16px}
+.testi-intro{font-size:16px;line-height:1.7;color:var(--mid);max-width:600px;margin-bottom:48px}
+.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+@media(max-width:900px){.testi-grid{grid-template-columns:1fr;gap:16px}}
+.testi-card{background:var(--card);border:1px solid var(--rule);border-top:4px solid var(--teal);padding:36px 40px;display:flex;flex-direction:column}
 @media(max-width:640px){.testi-card{padding:28px 24px}}
-.testi-header{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--light);margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.testi-header{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--light);margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
 .testi-from{color:var(--mid)}
-.testi-date{color:var(--light)}
-.testi-pull{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,3.5vw,34px);font-weight:900;text-transform:uppercase;line-height:1.1;color:var(--charcoal);margin-bottom:24px}
+.testi-source{color:var(--light)}
+.testi-pull{font-family:'Barlow Condensed',sans-serif;font-size:clamp(20px,2.5vw,26px);font-weight:900;text-transform:uppercase;line-height:1.1;color:var(--charcoal);margin-bottom:20px}
 .testi-pull em{color:var(--teal);font-style:normal}
-.testi-body{font-size:15px;line-height:1.85;color:var(--mid);margin-bottom:20px}
+.testi-body{font-size:14px;line-height:1.85;color:var(--mid);margin-bottom:16px;flex:1}
 .testi-body strong{color:var(--charcoal);font-weight:700}
-.testi-sig{display:flex;align-items:center;gap:16px;padding-top:20px;border-top:1px solid var(--rule)}
+.testi-sig{display:flex;align-items:center;gap:12px;padding-top:20px;border-top:1px solid var(--rule);margin-top:auto}
 .testi-sig-name{font-size:14px;font-weight:700;color:var(--charcoal)}
-.testi-sig-role{font-size:12px;color:var(--light);margin-top:2px}
+.testi-sig-role{font-size:11px;color:var(--light);margin-top:2px}
 .testi-sig-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0}
-.testi-context{margin-top:20px;font-size:12px;color:var(--light);line-height:1.6;font-style:italic}
+.testi-context{margin-top:12px;font-size:11px;color:var(--light);line-height:1.6;font-style:italic}
 
 /* ── GUARANTEE BAND ── */
 .early-access{background:var(--charcoal);border-top:1px solid rgba(255,255,255,0.05)}
@@ -573,23 +576,48 @@ body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);
 <section class="testi-section">
   <div class="testi-inner">
     <div class="testi-eyebrow">It Works — Here's Proof</div>
-    <div class="testi-card">
-      <div class="testi-header">
-        <span class="testi-from">From: Jase &nbsp;·&nbsp; Email to Alex Cooper</span>
-        <span class="testi-date">16 June 2024</span>
-      </div>
-      <div class="testi-pull">I find myself thinking<br><em>"What would Alex say?"</em><br>and it always helps me<br>chill the f*** out.</div>
-      <p class="testi-body">Three failed interviews. The third one ended halfway through when the interviewer told him straight: <strong>"Yeah, you're definitely not getting this job."</strong> He sat in the car for an hour and almost gave up on IT completely.</p>
-      <p class="testi-body">Then he kept pushing. His next interview was different. Good banter, genuine conversation, no hard quizzing. <strong>He landed an entry-level IT role at the Public Sector Commission — $80k — no degree, no corporate experience, 28 years old.</strong></p>
-      <p class="testi-body">"I'd like to say thanks as well. I think the time I spent in the room with you and the group changed a lot for me. I regularly go back and think about it... I often find myself thinking 'what would Alex say' when I'm stressed about going into an interview or starting my new job — and it always helps me chill the f*** out. So yeah, I can't thank you enough mate."</p>
-      <div class="testi-sig">
-        <div class="testi-sig-dot"></div>
-        <div>
-          <div class="testi-sig-name">Jase</div>
-          <div class="testi-sig-role">End User Support Analyst, Public Sector Commission — Perth, WA</div>
+    <p class="testi-intro">These aren't case studies. They're real people who worked with Alex before this programme existed in its current form — and wrote about it unprompted.</p>
+    <div class="testi-grid">
+
+      <!-- JASE -->
+      <div class="testi-card">
+        <div class="testi-header">
+          <span class="testi-from">Jase &nbsp;·&nbsp; Email</span>
+          <span class="testi-source">16 June 2024</span>
         </div>
+        <div class="testi-pull">I find myself thinking<br><em>"What would Alex say?"</em><br>It always helps me<br>chill the f*** out.</div>
+        <p class="testi-body">Three failed interviews. The third ended halfway when the interviewer said straight: <strong>"Yeah, you're definitely not getting this job."</strong> He sat in the car for an hour and almost quit IT completely. Then he kept pushing.</p>
+        <p class="testi-body">"I think the time I spent in the room with you changed a lot for me. I often find myself thinking 'what would Alex say' when I'm stressed — and it always helps me chill the f*** out. I can't thank you enough mate."</p>
+        <div class="testi-sig">
+          <div class="testi-sig-dot"></div>
+          <div>
+            <div class="testi-sig-name">Jase</div>
+            <div class="testi-sig-role">IT Support Analyst, Public Sector Commission — $80k, no degree, 28 years old</div>
+          </div>
+        </div>
+        <div class="testi-context">Unsolicited email, 16 June 2024.</div>
       </div>
-      <div class="testi-context">Jase worked with Alex in a group setting before the Life Circuitry programme existed in its current form. His email was sent unprompted, 16 June 2024.</div>
+
+      <!-- KATHRYN -->
+      <div class="testi-card">
+        <div class="testi-header">
+          <span class="testi-from">Kathryn &nbsp;·&nbsp; Facebook review</span>
+          <span class="testi-source">Unprompted</span>
+        </div>
+        <div class="testi-pull">Other courses pump you up.<br><em>This one gave me<br>actual tools.</em></div>
+        <p class="testi-body">"I have been on a few courses over the years — they pump you up full of confidence and energy whilst in class, but fail to teach actual tools to keep the momentum going once in the real world."</p>
+        <p class="testi-body">"<strong>This guy is brutally direct, no sugar coating.</strong> He calls it as he sees it. He will tell you what he notices — most of the time you won't realise it's you, until you stop and think about it. He's hitting the nail on the head."</p>
+        <p class="testi-body">"Don't wait for motivation to kick in. Just start — whatever it is — and be consistent. <strong>Motivation will follow.</strong> Time is precious. If you are looking for someone real, Alex's new adventure is up and running."</p>
+        <div class="testi-sig">
+          <div class="testi-sig-dot"></div>
+          <div>
+            <div class="testi-sig-name">Kathryn</div>
+            <div class="testi-sig-role">"Opened my eyes to my Value" — 3 weeks working with Alex</div>
+          </div>
+        </div>
+        <div class="testi-context">Posted publicly on Facebook. Reproduced with permission.</div>
+      </div>
+
     </div>
   </div>
 </section>
