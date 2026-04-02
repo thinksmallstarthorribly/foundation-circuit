@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upcoming Events — Life Circuitry / Alex Cooper</title>
+<meta name="description" content="Live events and talks by Alex Cooper. Life Circuitry — for capable people who are stuck.">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --teal:#5ec5cc;--teal-d:#3aabb3;--teal-p:#eaf7f8;--teal-m:#b8e8eb;
+  --charcoal:#1a1a1a;--mid:#444;--light:#888;
+  --bg:#f0f0ee;--card:#fff;--rule:#e8e8e6;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Barlow',sans-serif;color:var(--charcoal);background:var(--bg);margin:0}
+
+/* ── NAV ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,26,26,0.97);backdrop-filter:blur(8px);padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'Barlow Condensed',sans-serif;font-size:17px;font-weight:900;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal);text-decoration:none}
+.nav-logo span{color:rgba(255,255,255,0.3)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-link{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.5);text-decoration:none;transition:color 0.2s}
+.nav-link:hover,.nav-link.active{color:var(--teal)}
+.nav-cta{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:10px 20px;background:var(--teal);color:#fff;text-decoration:none;transition:all 0.2s}
+.nav-cta:hover{background:var(--teal-d)}
+@media(max-width:640px){.nav-links{gap:12px}.nav-link{display:none}.nav{padding:0 20px}}
+
+/* ── PAGE HEADER ── */
+.page-header{background:var(--charcoal);padding:120px 40px 80px;position:relative;overflow:hidden}
+.page-header-bg{position:absolute;inset:0;opacity:0.04;background:repeating-linear-gradient(0deg,transparent,transparent 60px,rgba(94,197,204,0.5) 60px,rgba(94,197,204,0.5) 61px),repeating-linear-gradient(90deg,transparent,transparent 60px,rgba(94,197,204,0.5) 60px,rgba(94,197,204,0.5) 61px)}
+.page-header-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.page-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.3em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.page-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(48px,7vw,80px);font-weight:900;text-transform:uppercase;letter-spacing:0.01em;line-height:0.92;color:#fff;margin-bottom:24px}
+.page-title em{color:var(--teal);font-style:normal}
+.page-body{font-size:17px;line-height:1.7;color:rgba(255,255,255,0.5);max-width:520px}
+
+/* ── BREADCRUMB ── */
+.breadcrumb{background:rgba(94,197,204,0.06);border-bottom:1px solid rgba(94,197,204,0.12);padding:14px 40px}
+.breadcrumb-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase}
+.breadcrumb a{color:var(--teal);text-decoration:none}
+.breadcrumb a:hover{color:var(--teal-d)}
+.breadcrumb-sep{color:rgba(255,255,255,0.2)}
+.breadcrumb-current{color:rgba(255,255,255,0.4)}
+@media(max-width:640px){.breadcrumb{padding:14px 20px}}
+
+/* ── EVENTS LIST ── */
+.events-section{padding:80px 40px;background:var(--bg)}
+@media(max-width:640px){.events-section{padding:60px 20px}}
+.events-inner{max-width:1100px;margin:0 auto}
+.events-grid{display:flex;flex-direction:column;gap:2px;margin-top:0}
+
+/* ── EVENT CARD ── */
+.event-card{background:var(--card);border:1px solid var(--rule);display:grid;grid-template-columns:auto 1fr auto;gap:0;overflow:hidden;transition:border-color 0.2s,box-shadow 0.2s}
+.event-card:hover{border-color:var(--teal-m);box-shadow:0 4px 24px rgba(94,197,204,0.08)}
+@media(max-width:768px){.event-card{grid-template-columns:1fr}}
+
+.event-date-block{background:var(--charcoal);padding:32px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:120px;text-align:center}
+.event-month{font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+.event-day{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;color:#fff;line-height:1}
+.event-weekday{font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:rgba(255,255,255,0.3);margin-top:4px}
+@media(max-width:768px){.event-date-block{flex-direction:row;gap:16px;padding:20px 24px;min-width:unset;text-align:left;align-items:center}}
+@media(max-width:768px){.event-day{font-size:36px}}
+
+.event-body{padding:32px 36px;display:flex;flex-direction:column;justify-content:center;gap:12px}
+@media(max-width:768px){.event-body{padding:24px}}
+.event-tag{font-size:10px;font-weight:800;letter-spacing:0.2em;text-transform:uppercase;color:var(--teal);margin-bottom:4px}
+.event-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(22px,3vw,30px);font-weight:900;text-transform:uppercase;letter-spacing:0.02em;line-height:1.05;color:var(--charcoal)}
+.event-desc{font-size:14px;line-height:1.7;color:var(--mid);max-width:560px}
+.event-meta{display:flex;flex-wrap:wrap;gap:20px;margin-top:4px}
+.event-meta-item{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--light)}
+.event-meta-item svg{flex-shrink:0;opacity:0.6}
+
+.event-cta-block{padding:32px 28px;display:flex;flex-direction:column;align-items:flex-end;justify-content:center;gap:12px;border-left:1px solid var(--rule)}
+@media(max-width:768px){.event-cta-block{border-left:none;border-top:1px solid var(--rule);flex-direction:row;align-items:center;justify-content:space-between;padding:20px 24px}}
+.event-price{text-align:right}
+@media(max-width:768px){.event-price{text-align:left}}
+.event-price-label{font-size:10px;font-weight:800;letter-spacing:0.15em;text-transform:uppercase;color:var(--light);margin-bottom:4px}
+.event-price-val{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;color:var(--charcoal);line-height:1}
+.event-price-sub{font-size:11px;color:var(--light);margin-top:2px}
+.btn-event{font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:14px 24px;background:var(--teal);color:#fff;text-decoration:none;transition:all 0.2s;white-space:nowrap;display:inline-block}
+.btn-event:hover{background:var(--teal-d);transform:translateY(-1px)}
+
+/* ── EMPTY STATE (for future use) ── */
+.events-empty{text-align:center;padding:80px 40px;color:var(--light)}
+
+/* ── FOOTER ── */
+.footer{background:var(--charcoal);padding:48px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+.footer-logo{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:0.08em;color:var(--teal)}
+.footer-logo span{color:rgba(255,255,255,0.25)}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.25)}
+.footer-links{display:flex;gap:20px}
+.footer-link{font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;transition:color 0.2s}
+.footer-link:hover{color:var(--teal)}
+@media(max-width:640px){.footer{padding:40px 20px;flex-direction:column;align-items:flex-start;gap:16px}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="/" class="nav-logo">Life Circuitry <span>/ Think Small</span></a>
+  <div class="nav-links">
+    <a href="/#programme" class="nav-link">Programme</a>
+    <a href="/#about" class="nav-link">About</a>
+    <a href="/events/" class="nav-link active">Events</a>
+    <a href="/access.html" class="nav-link">Login</a>
+    <a href="/#pricing" class="nav-cta">Get the Programme &rarr;</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb" style="background:var(--charcoal);border-bottom:1px solid rgba(255,255,255,0.06)">
+  <div class="breadcrumb-inner">
+    <a href="/">Life Circuitry</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Events</span>
+  </div>
+</div>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="page-header-inner">
+    <div class="page-eyebrow">Alex Cooper &mdash; Live</div>
+    <h1 class="page-title">Upcoming<br><em>Events</em></h1>
+    <p class="page-body">Live talks, workshops, and sessions. If you have been reading and thinking and not yet moving, these are the rooms where that changes.</p>
+  </div>
+</section>
+
+<!-- EVENTS LIST -->
+<section class="events-section">
+  <div class="events-inner">
+    <div class="events-grid">
+
+      <!-- EVENT: The Confidence Gap -->
+      <div class="event-card">
+        <div class="event-date-block">
+          <div class="event-month">Apr</div>
+          <div class="event-day">30</div>
+          <div class="event-weekday">Thursday</div>
+        </div>
+        <div class="event-body">
+          <div class="event-tag">Talk &mdash; Stirling Business Association</div>
+          <div class="event-title">The Confidence Gap:<br>What Happens When Capable People Get Stuck</div>
+          <p class="event-desc">A one-hour diagnostic session on why high-performing people stall, what actually produces self-trust, and the structural fault that keeps capable people stuck in the same loop.</p>
+          <div class="event-meta">
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              8:00 AM &ndash; 9:00 AM &nbsp;&middot;&nbsp; Doors 7:45 AM
+            </div>
+            <div class="event-meta-item">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              45 Delawney St, Balcatta WA 6021
+            </div>
+          </div>
+        </div>
+        <div class="event-cta-block">
+          <div class="event-price">
+            <div class="event-price-label">From</div>
+            <div class="event-price-val">FREE</div>
+            <div class="event-price-sub">SBA Members &middot; Non-Members $15</div>
+          </div>
+          <a href="/events/confidence-gap/" class="btn-event">View Event &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">Life Circuitry <span>/ Think Small, Start Horribly</span></div>
+  <div class="footer-copy">Alex Cooper &copy; 2026 &mdash; All rights reserved</div>
+  <div class="footer-links">
+    <a href="/access.html" class="footer-link">Login</a>
+    <a href="/events/" class="footer-link">Events</a>
+    <a href="mailto:hello@thinksmallstarthorribly.com" class="footer-link">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
